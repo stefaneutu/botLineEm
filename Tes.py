@@ -1,4 +1,4 @@
-#บอทตัวนี้เราทำมาแจกนะครับ
+#Blue Eyes Bot
 #BY PHE SELF BOT LINE
 
 from linepy import *
@@ -77,7 +77,7 @@ def sendMessageWithMention(to, mid):
         
 def helpmessage():
     helpMessage = "╔═══════════════" + "\n" + \
-                  "╠BY PHU SELF BOT LINE" + "\n" + \
+                  "╠BY Blue Eyes BOT LINE" + "\n" + \
                   "║" + "\n" + \
                   "╠══✪〘 Help Message 〙✪══" + "\n" + \
                   "║" + "\n" + \
@@ -137,7 +137,7 @@ def helpmessage():
                   "╠➥ MimicList" + "\n" + \
                   "╠➥ MimicAdd「Mention」" + "\n" + \
                   "╠➥ MimicDel「Mention」" + "\n" + \
-                  "╠➥ Mention" + "\n" + \
+                  "╠➥ tagall" + "\n" + \
                   "╠➥ Lurking「Oɴ/Off/Reset」" + "\n" + \
                   "╠➥ Lurking" + "\n" + \
                   "║" + "\n" + \
@@ -152,7 +152,7 @@ def helpmessage():
                   "╠➥ SearchImage「Search」" + "\n" + \
                   "╠➥ ScreenshootWebsite「LinkUrl」" + "\n" + \
                   "║" + "\n" + \
-                  "╚═〘 BY PHU SELF BOT LINE 〙"
+                  "╚═〘 BY Blue Eyes BOT LINE 〙"
     return helpMessage
     
 def helptexttospeech():
@@ -211,11 +211,11 @@ def helptexttospeech():
                          "╠ vi : Vietnamese" + "\n" + \
                          "╠ cy : Welsh" + "\n" + \
                          "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                          "BY PHU SELF BOT LINE"
+                          "BY Blue Eyes BOT LINE"
     return helpTextToSpeech
     
 def helptranslate():
-    helpTranslate =    "╔══[ BY PHU SELF BOT LINE ]" + "\n" + \
+    helpTranslate =    "╔══[ BY Blue Eyes BOT LINE ]" + "\n" + \
                        "╠ af : afrikaans" + "\n" + \
                        "╠ sq : albanian" + "\n" + \
                        "╠ am : amharic" + "\n" + \
@@ -323,7 +323,7 @@ def helptranslate():
                        "╠ fil : Filipino" + "\n" + \
                        "╠ he : Hebrew" + "\n" + \
                        "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                         "BY PHU SELF BOT LINE"
+                         "BY Blue Eyes BOT LINE"
     return helpTranslate
 #==============================================================================#
 def lineBot(op):
@@ -740,7 +740,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ Total {} Groups ]".format(str(len(groups)))
                         nadya.sendMessage(to, str(ret_))
 #==============================================================================#          
-                elif text.lower() == 'mention':
+                elif text.lower() == 'tagall':
                     group = nadya.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
                     k = len(nama)//100
