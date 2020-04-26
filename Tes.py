@@ -15,7 +15,7 @@ botStart = time.time()
 nadya = LINE()
 #nadya = LINE("TOKEN KAMU")
 #nadya = LINE("Email","Password")
-nadya.log("Auth Token : " + str(nadya.authToken))
+nadya.log("Auth Token : EQi4L7wcqPrO1mf5kzo3.maj0kTIoXRhlkvc8ObQ3WW.Up+TB38GUc2VMmV22Y4YxZ73qCtCUvLiw4Rr7D4mqdA=" + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : EQi4L7wcqPrO1mf5kzo3.maj0kTIoXRhlkvc8ObQ3WW.Up+TB38GUc2VMmV22Y4YxZ73qCtCUvLiw4Rr7D4mqdA=" + str(channelToken))
 
