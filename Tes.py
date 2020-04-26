@@ -753,7 +753,7 @@ def lineBot(op):
                             s += 7
                             txt += u'@Alin \n'
                         nadya.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                        nadya.sendMessage(to, "Total {} Mention".format(str(len(nama))))          
+                        nadya.sendMessage(to, "Total {} tagged boarding open https://t4.ftcdn.net/jpg/00/29/82/13/240_F_29821313_ZYUHftqXCzsquA6encY5ouBCUxwdnFYC.jpg".format(str(len(nama))))          
                 elif text.lower() == 'lurking on':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
