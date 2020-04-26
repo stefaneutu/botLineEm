@@ -19,7 +19,7 @@ nadya.log("Auth Token : EQi4L7wcqPrO1mf5kzo3.maj0kTIoXRhlkvc8ObQ3WW.Up+TB38GUc2V
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : EQi4L7wcqPrO1mf5kzo3.maj0kTIoXRhlkvc8ObQ3WW.Up+TB38GUc2VMmV22Y4YxZ73qCtCUvLiw4Rr7D4mqdA=" + str(channelToken))
 
-nadyaMID = nadya.profile.mid
+nadyaMID = ["U09d3875eee444adc9d3d398067b0d3b3" = nadya.profile.mid]
 nadyaProfile = nadya.getProfile()
 lineSettings = nadya.getSettings()
 oepoll = OEPoll(nadya)
