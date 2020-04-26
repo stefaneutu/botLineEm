@@ -17,7 +17,7 @@ nadya = LINE()
 #nadya = LINE("Email","Password")
 nadya.log("Auth Token : " + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
-nadya.log("Channel Token : " + str(channelToken))
+nadya.log("Channel Token : EQi4L7wcqPrO1mf5kzo3.maj0kTIoXRhlkvc8ObQ3WW.Up+TB38GUc2VMmV22Y4YxZ73qCtCUvLiw4Rr7D4mqdA=" + str(channelToken))
 
 nadyaMID = nadya.profile.mid
 nadyaProfile = nadya.getProfile()
@@ -156,7 +156,7 @@ def helpmessage():
     return helpMessage
     
 def helptexttospeech():
-    helpTextToSpeech =   "╔══[ BY PHU SELF BOT LINE]" + "\n" + \
+    helpTextToSpeech =   "╔══[ BY Blue Eyes BOT LINE]" + "\n" + \
                          "╠ af : Afrikaans" + "\n" + \
                          "╠ sq : Albanian" + "\n" + \
                          "╠ ar : Arabic" + "\n" + \
@@ -334,7 +334,7 @@ def lineBot(op):
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
-                nadya.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(nadya.getContact(op.param1).displayName)))
+                nadya.sendMessage(op.param1, "Hy {} thank you for add me".format(str(nadya.getContact(op.param1).displayName)))
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = nadya.getGroup(op.param1)
@@ -386,11 +386,11 @@ def lineBot(op):
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    nadya.sendMessage(to, "Bot sudah berjalan selama {}".format(str(runtime)))
+                    nadya.sendMessage(to, "Bot uptime {}".format(str(runtime)))
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u5a91f31a0882cae3e309576cc4bf1e5a"
+                        owner = "U09d3875eee444adc9d3d398067b0d3b3"
                         creator = nadya.getContact(owner)
                         contact = nadya.getContact(nadyaMID)
                         grouplist = nadya.getGroupIdsJoined()
@@ -430,43 +430,43 @@ def lineBot(op):
                         nadya.sendMessage(msg.to, str(e))
                 elif text.lower() == 'autoadd on':
                     settings["autoAdd"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Add")
+                    nadya.sendMessage(to, "True on Auto Add")
                 elif text.lower() == 'autoadd off':
                     settings["autoAdd"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Add")
+                    nadya.sendMessage(to, "Fail on Auto Add")
                 elif text.lower() == 'autojoin on':
                     settings["autoJoin"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Join")
+                    nadya.sendMessage(to, "True on Auto Join")
                 elif text.lower() == 'autojoin off':
                     settings["autoJoin"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Join")
+                    nadya.sendMessage(to, "Fail On Auto Join")
                 elif text.lower() == 'autoleave on':
                     settings["autoLeave"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Leave")
+                    nadya.sendMessage(to, "True On Auto Leave")
                 elif text.lower() == 'autojoin off':
                     settings["autoLeave"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Leave")
+                    nadya.sendMessage(to, "Fail On Auto Leave")
                 elif text.lower() == 'autoread on':
                     settings["autoRead"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Read")
+                    nadya.sendMessage(to, "true on Auto Read")
                 elif text.lower() == 'autoread off':
                     settings["autoRead"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Read")
+                    nadya.sendMessage(to, "fail on Auto Read")
                 elif text.lower() == 'checksticker on':
                     settings["checkSticker"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Check Details Sticker")
+                    nadya.sendMessage(to, "true on Check Details Sticker")
                 elif text.lower() == 'checksticker off':
                     settings["checkSticker"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Check Details Sticker")
+                    nadya.sendMessage(to, "fail on Check Details Sticker")
                 elif text.lower() == 'detectmention on':
                     settings["datectMention"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Detect Mention")
+                    nadya.sendMessage(to, "true on Detect Mention")
                 elif text.lower() == 'detectmention off':
                     settings["datectMention"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Detect Mention")
+                    nadya.sendMessage(to, "fail on Detect Mention")
                 elif text.lower() == 'clonecontact':
                     settings["copy"] = True
-                    nadya.sendMessage(to, "Kirim Contact Yang Mau Di Copy")
+                    nadya.sendMessage(to, "contact clone yes")
 #==============================================================================#
                 elif text.lower() == 'me':
                     sendMessageWithMention(to, nadyaMID)
@@ -586,9 +586,9 @@ def lineBot(op):
                             break
                         try:
                             nadya.cloneContactProfile(contact)
-                            nadya.sendMessage(msg.to, "Berhasil clone member tunggu beberapa saat sampai profile berubah")
+                            nadya.sendMessage(msg.to, "clone on")
                         except:
-                            nadya.sendMessage(msg.to, "Gagal clone member")
+                            nadya.sendMessage(msg.to, "done clone member")
                             
                 elif text.lower() == 'restoreprofile':
                     try:
@@ -597,9 +597,9 @@ def lineBot(op):
                         nadyaProfile.pictureStatus = str(myProfile["pictureStatus"])
                         nadya.updateProfileAttribute(8, nadyaProfile.pictureStatus)
                         nadya.updateProfile(nadyaProfile)
-                        nadya.sendMessage(msg.to, "Berhasil restore profile tunggu beberapa saat sampai profile berubah")
+                        nadya.sendMessage(msg.to, "try restorn now")
                     except:
-                        nadya.sendMessage(msg.to, "Gagal restore profile")
+                        nadya.sendMessage(msg.to, "Done restore profile")
                         
 #==============================================================================#
                 elif msg.text.lower().startswith("mimicadd "):
@@ -611,7 +611,7 @@ def lineBot(op):
                     for target in targets:
                         try:
                             settings["mimic"]["target"][target] = True
-                            nadya.sendMessage(msg.to,"Target ditambahkan!")
+                            nadya.sendMessage(msg.to,"Target on")
                             break
                         except:
                             nadya.sendMessage(msg.to,"Added Target Fail !")
@@ -672,40 +672,40 @@ def lineBot(op):
                             ticket = nadya.reissueGroupTicket(to)
                             nadya.sendMessage(to, "[ Group Ticket ]\nhttps://nadya.me/R/ti/g/{}".format(str(ticket)))
                         else:
-                            nadya.sendMessage(to, "Grup qr tidak terbuka silahkan buka terlebih dahulu dengan perintah {}openqr".format(str(settings["keyCommand"])))
+                            nadya.sendMessage(to, "Group join by qr {} openqr".format(str(settings["keyCommand"])))
                 elif text.lower() == 'groupticket on':
                     if msg.toType == 2:
                         group = nadya.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            nadya.sendMessage(to, "Grup qr sudah terbuka")
+                            nadya.sendMessage(to, "Group qr only")
                         else:
                             group.preventedJoinByTicket = False
                             nadya.updateGroup(group)
-                            nadya.sendMessage(to, "Berhasil membuka grup qr")
+                            nadya.sendMessage(to, "fail to grup qr")
                 elif text.lower() == 'groupticket off':
                     if msg.toType == 2:
                         group = nadya.getGroup(to)
                         if group.preventedJoinByTicket == True:
-                            nadya.sendMessage(to, "Grup qr sudah tertutup")
+                            nadya.sendMessage(to, "Group qr open")
                         else:
                             group.preventedJoinByTicket = True
                             nadya.updateGroup(group)
-                            nadya.sendMessage(to, "Berhasil menutup grup qr")
+                            nadya.sendMessage(to, "Group prevent qr")
                 elif text.lower() == 'groupinfo':
                     group = nadya.getGroup(to)
                     try:
                         gCreator = group.creator.displayName
                     except:
-                        gCreator = "Tidak ditemukan"
+                        gCreator = "Blue Eyes"
                     if group.invitee is None:
                         gPending = "0"
                     else:
                         gPending = str(len(group.invitee))
                     if group.preventedJoinByTicket == True:
-                        gQr = "Tertutup"
-                        gTicket = "Tidak ada"
+                        gQr = "Blue Eyes"
+                        gTicket = "Blue Eyes"
                     else:
-                        gQr = "Terbuka"
+                        gQr = "Blue Eyes"
                         gTicket = "https://nadya.me/R/ti/g/{}".format(str(nadya.reissueGroupTicket(group.id)))
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
                     ret_ = "╔══[ Group Info ]"
