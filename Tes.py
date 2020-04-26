@@ -1,5 +1,5 @@
 #Blue Eyes Bot
-#BY PHE SELF BOT LINE
+#BY Blue Eyes BOT LINE
 
 from linepy import *
 from datetime import datetime
@@ -32,8 +32,8 @@ settings = json.load(settingsOpen)
 
 
 myProfile = {
-	"displayName": "",
-	"statusMessage": "",
+	"displayName": "Blue Eyes",
+	"statusMessage": "protection on",
 	"pictureStatus": ""
 }
 
